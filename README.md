@@ -95,27 +95,6 @@ docker build -t cis-controls-tool .
 docker run -p 8080:80 cis-edu-tool
 ```
 
-## Project Structure
-
-```
-cis-controls-tool/
-├── index.html              # Main application entry point
-├── css/
-│   ├── style.css          # Main stylesheet
-│   └── rtl.css            # Arabic RTL support
-├── js/
-│   ├── app.js             # Core application logic
-│   ├── data.js            # CIS Controls data (YAML converted to JS)
-│   ├── ui.js              # UI component management
-│   └── assessment.js      # Self-assessment tool logic
-├── docs/
-│   └── user-guide.md      # Comprehensive user guide
-├── README.md              # This file
-├── LICENSE                # MIT License
-└── .github/
-    └── workflows/         # GitHub Actions CI/CD
-```
-
 ## Usage Guide
 
 ### 1. Learning the Controls
