@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIS Controls v8.1 Education Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h2 class="brand-title" data-translate="app_title">CIS Controls v8.1</h2>
+                </div>
+                <div class="nav-actions">
+                    <button class="btn btn--secondary btn--sm" id="langToggle">
+                        <span id="langLabel">العربية</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+        <!-- Landing Page -->
+        <section id="landingPage" class="page active">
+            <div class="container">
+                <div class="hero-section">
+                    <h1 class="hero-title" data-translate="hero_title">CIS Controls v8.1 Education Platform</h1>
+                    <p class="hero-subtitle" data-translate="hero_subtitle">Comprehensive cybersecurity framework for organizations of all sizes</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">18</div>
+                        <div class="stat-label" data-translate="stat_controls">Controls</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">153</div>
+                        <div class="stat-label" data-translate="stat_safeguards">Safeguards</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label" data-translate="stat_igs">Implementation Groups</div>
+                    </div>
+                </div>
+
+                <div class="feature-cards">
+                    <div class="feature-card" onclick="navigateTo('controlsLibrary')">
+                        <div class="feature-icon">📚</div>
+                        <h3 data-translate="feature_library_title">Controls Library</h3>
+                        <p data-translate="feature_library_desc">Explore all 18 CIS Controls with detailed safeguards and implementation guidance</p>
+                    </div>
+                    <div class="feature-card" onclick="navigateTo('selfAssessment')">
+                        <div class="feature-icon">📊</div>
+                        <h3 data-translate="feature_assessment_title">Self-Assessment</h3>
+                        <p data-translate="feature_assessment_desc">Evaluate your organization's cybersecurity maturity level</p>
+                    </div>
+                    <div class="feature-card" onclick="navigateTo('frameworkMappings')">
+                        <div class="feature-icon">🔗</div>
+                        <h3 data-translate="feature_mappings_title">Framework Mappings</h3>
+                        <p data-translate="feature_mappings_desc">Understand relationships with NIST CSF and ISO 27001</p>
+                    </div>
+                </div>
+
+                <div class="benefits-section">
+                    <h2 data-translate="benefits_title">Key Benefits</h2>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <strong data-translate="benefit1_title">Prioritized Actions:</strong>
+                            <span data-translate="benefit1_desc">Focus on the most impactful security controls first</span>
+                        </div>
+                        <div class="benefit-item">
+                            <strong data-translate="benefit2_title">Scalable Framework:</strong>
+                            <span data-translate="benefit2_desc">Implementation Groups designed for organizations of all sizes</span>
+                        </div>
+                        <div class="benefit-item">
+                            <strong data-translate="benefit3_title">Industry Recognition:</strong>
+                            <span data-translate="benefit3_desc">Widely adopted across financial, healthcare, and technology sectors</span>
+                        </div>
+                        <div class="benefit-item">
+                            <strong data-translate="benefit4_title">Compliance Support:</strong>
+                            <span data-translate="benefit4_desc">Maps to major frameworks including NIST CSF and ISO 27001</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Controls Library Page -->
+        <section id="controlsLibrary" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <button class="btn btn--secondary btn--sm" onclick="navigateTo('landingPage')" data-translate="btn_back">← Back</button>
+                    <h1 data-translate="controls_library_title">Controls Library</h1>
+                </div>
+
+                <div class="controls-filters">
+                    <div class="filter-group">
+                        <label data-translate="filter_ig">Implementation Group:</label>
+                        <select id="igFilter" class="form-control">
+                            <option value="all" data-translate="filter_all">All Groups</option>
+                            <option value="IG1">IG1</option>
+                            <option value="IG2">IG2</option>
+                            <option value="IG3">IG3</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label data-translate="filter_search">Search:</label>
+                        <input type="text" id="searchControl" class="form-control" placeholder="Search controls...">
+                    </div>
+                </div>
+
+                <div id="controlsList" class="controls-list"></div>
+            </div>
+        </section>
+
+        <!-- Implementation Groups Page -->
+        <section id="implementationGroups" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <button class="btn btn--secondary btn--sm" onclick="navigateTo('landingPage')" data-translate="btn_back">← Back</button>
+                    <h1 data-translate="ig_guide_title">Implementation Groups Guide</h1>
+                </div>
+
+                <div class="ig-cards">
+                    <div class="ig-card">
+                        <div class="ig-header ig1-header">
+                            <h2>IG1</h2>
+                            <p data-translate="ig1_profile">Small to Medium-sized Businesses</p>
+                        </div>
+                        <div class="ig-content">
+                            <p data-translate="ig1_description">Baseline cybersecurity controls for all organizations. Suitable for small organizations with limited IT and cybersecurity resources.</p>
+                            <ul class="ig-details">
+                                <li><strong data-translate="ig_team">Team Size:</strong> <span data-translate="ig1_team">1-3 personnel</span></li>
+                                <li><strong data-translate="ig_budget">Budget:</strong> <span data-translate="ig1_budget">Limited resources</span></li>
+                                <li><strong data-translate="ig_safeguards">Safeguards:</strong> <span>49</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ig-card">
+                        <div class="ig-header ig2-header">
+                            <h2>IG2</h2>
+                            <p data-translate="ig2_profile">Medium to Large Enterprises</p>
+                        </div>
+                        <div class="ig-content">
+                            <p data-translate="ig2_description">Enhanced security controls for organizations with more resources and complex IT environments.</p>
+                            <ul class="ig-details">
+                                <li><strong data-translate="ig_team">Team Size:</strong> <span data-translate="ig2_team">5-20 personnel</span></li>
+                                <li><strong data-translate="ig_budget">Budget:</strong> <span data-translate="ig2_budget">Moderate budget</span></li>
+                                <li><strong data-translate="ig_safeguards">Safeguards:</strong> <span>111</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="ig-card">
+                        <div class="ig-header ig3-header">
+                            <h2>IG3</h2>
+                            <p data-translate="ig3_profile">Large Enterprises, Critical Infrastructure</p>
+                        </div>
+                        <div class="ig-content">
+                            <p data-translate="ig3_description">Advanced security controls for large organizations operating critical infrastructure or handling highly sensitive data.</p>
+                            <ul class="ig-details">
+                                <li><strong data-translate="ig_team">Team Size:</strong> <span data-translate="ig3_team">20+ personnel</span></li>
+                                <li><strong data-translate="ig_budget">Budget:</strong> <span data-translate="ig3_budget">Substantial budget</span></li>
+                                <li><strong data-translate="ig_safeguards">Safeguards:</strong> <span>153</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="assessment-questions">
+                    <h2 data-translate="ig_assessment_title">Which Implementation Group is Right for You?</h2>
+                    <div id="igAssessment" class="ig-assessment-content"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Self-Assessment Page -->
+        <section id="selfAssessment" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <button class="btn btn--secondary btn--sm" onclick="navigateTo('landingPage')" data-translate="btn_back">← Back</button>
+                    <h1 data-translate="assessment_title">Cybersecurity Maturity Assessment</h1>
+                </div>
+
+                <div id="assessmentContent">
+                    <div id="assessmentIntro" class="assessment-intro">
+                        <p data-translate="assessment_intro">Answer the following questions to evaluate your organization's cybersecurity maturity across CIS Controls.</p>
+                        <button class="btn btn--primary" onclick="startAssessment()" data-translate="btn_start_assessment">Start Assessment</button>
+                    </div>
+
+                    <div id="assessmentQuestions" class="assessment-questions-container" style="display: none;"></div>
+
+                    <div id="assessmentResults" style="display: none;">
+                        <h2 data-translate="assessment_results_title">Assessment Results</h2>
+                        <div id="resultsContent"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Framework Mappings Page -->
+        <section id="frameworkMappings" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <button class="btn btn--secondary btn--sm" onclick="navigateTo('landingPage')" data-translate="btn_back">← Back</button>
+                    <h1 data-translate="mappings_title">Framework Mappings</h1>
+                </div>
+
+                <div class="mappings-tabs">
+                    <button class="tab-btn active" onclick="showMapping('nist')" data-translate="tab_nist">NIST CSF</button>
+                    <button class="tab-btn" onclick="showMapping('iso')" data-translate="tab_iso">ISO 27001</button>
+                </div>
+
+                <div id="nistMapping" class="mapping-content">
+                    <h2 data-translate="nist_mapping_title">CIS Controls to NIST Cybersecurity Framework</h2>
+                    <div id="nistMappingTable"></div>
+                </div>
+
+                <div id="isoMapping" class="mapping-content" style="display: none;">
+                    <h2 data-translate="iso_mapping_title">CIS Controls to ISO 27001</h2>
+                    <div id="isoMappingTable"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Page -->
+        <section id="resources" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <button class="btn btn--secondary btn--sm" onclick="navigateTo('landingPage')" data-translate="btn_back">← Back</button>
+                    <h1 data-translate="resources_title">Resources &amp; Downloads</h1>
+                </div>
+
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <h3 data-translate="resource_ig1_title">IG1 Implementation Checklist</h3>
+                        <p data-translate="resource_ig1_desc">Essential safeguards for small organizations</p>
+                        <button class="btn btn--outline" onclick="downloadResource('IG1')" data-translate="btn_download">Download</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3 data-translate="resource_ig2_title">IG2 Implementation Checklist</h3>
+                        <p data-translate="resource_ig2_desc">Enhanced controls for medium enterprises</p>
+                        <button class="btn btn--outline" onclick="downloadResource('IG2')" data-translate="btn_download">Download</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3 data-translate="resource_ig3_title">IG3 Implementation Checklist</h3>
+                        <p data-translate="resource_ig3_desc">Advanced controls for large organizations</p>
+                        <button class="btn btn--outline" onclick="downloadResource('IG3')" data-translate="btn_download">Download</button>
+                    </div>
+                    <div class="resource-card">
+                        <h3 data-translate="resource_maturity_title">Maturity Assessment Template</h3>
+                        <p data-translate="resource_maturity_desc">Evaluate your security posture</p>
+                        <button class="btn btn--outline" onclick="downloadResource('maturity')" data-translate="btn_download">Download</button>
+                    </div>
+                </div>
+
+                <div class="industry-examples">
+                    <h2 data-translate="industry_examples_title">Industry Implementation Examples</h2>
+                    <div id="industryExamples"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="translations.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
