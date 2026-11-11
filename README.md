@@ -4,7 +4,7 @@ A professional, bilingual (English/Arabic) web application for understanding and
 
 ## Features
 
-### 📚 **CIS Controls Library**
+### **CIS Controls Library**
 - Complete reference of all 18 CIS Controls
 - Detailed descriptions, objectives, and implementation guidelines
 - 153 Safeguards organized by Implementation Groups (IG1, IG2, IG3)
@@ -12,40 +12,40 @@ A professional, bilingual (English/Arabic) web application for understanding and
 - Asset type classifications (Devices, Data, Users, Network, Applications)
 - Interactive expandable control cards with advanced filtering
 
-### 🎯 **Implementation Group Guidance**
+### **Implementation Group Guidance**
 - IG1 (Basic): 49 safeguards for small organizations
 - IG2 (Intermediate): 111 safeguards for medium enterprises
 - IG3 (Advanced): 153 safeguards for large organizations and critical infrastructure
 - Assessment questionnaire to determine suitable IG for your organization
 - Resource allocation requirements and team size guidance
 
-### 📊 **Self-Assessment Tool**
+### **Self-Assessment Tool**
 - Interactive maturity assessment questionnaire
 - 5-level maturity scoring for each control category
 - Gap analysis and strengths identification
 - Personalized implementation roadmap
 - Export assessment results and recommendations
 
-### 🔗 **Framework Mappings**
+### **Framework Mappings**
 - **NIST Cybersecurity Framework (CSF)**: Map all controls to NIST functions and categories
 - **ISO 27001**: Alignment with international information security standards
 - Interactive mapping visualization and comparison tables
 - Cross-reference capabilities
 
-### 🌍 **Bilingual Support**
+### **Bilingual Support**
 - Full English and Arabic interface
 - Professional translations for all content
 - Arabic right-to-left (RTL) display optimization
 - Consistent cybersecurity terminology in both languages
 - Easy language toggle without losing context
 
-### 💼 **Industry-Specific Guidance**
+### **Industry-Specific Guidance**
 - Financial Services (banking, compliance, fraud prevention)
 - Healthcare (HIPAA compliance, patient data protection)
 - Technology/SaaS (cloud security, application development)
 - Small Business (foundational security practices)
 
-### 📥 **Resources & Checklists**
+### **Resources & Checklists**
 - IG1, IG2, IG3 implementation checklists
 - Safeguard tracking worksheets
 - Maturity assessment templates
